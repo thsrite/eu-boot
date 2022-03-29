@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eu.system.mapper.SysUserMapper">
+
+    <select id="userList" resultType="com.eu.system.model.po.SysUser">
+        SELECT
+        u.user_id,
+        u.nick_name,
+        u.user_name,
+        u.email,
+        u.avatar,
+        u.phone,
+        u.password,
+        u.sex,
+        u.status,
+        u.login_ip,
+        u.login_date,
+        u.create_by,
+        u.create_time
+        FROM
+        sys_user u
+        WHERE
+        u.is_delete = 0
+        <if test="userName != null and userName != ''">
+            AND u.user_name LIKE concat('%', #{userName}, '%')
+        </if>
+        <if test="status != null and status != ''">
+            AND u.status = ${status}
+        </if>
+        <if test="phone != null and phone != ''">
+            AND u.phone LIKE concat('%', #{phone}, '%')
+        </if>
+        <if test="startTime != null and startTime != ''"><!-- 开始时间检索 -->
+            AND date_format(u.create_time,'%y%m%d') &gt;= date_format(#{startTime},'%y%m%d')
+        </if>
+        <if test="endTime != null and endTime != ''"><!-- 结束时间检索 -->
+            AND date_format(u.create_time,'%y%m%d') &lt;= date_format(#{endTime},'%y%m%d')
+        </if>
+        ORDER BY u.login_date DESC
+    </select>
+
+</mapper>

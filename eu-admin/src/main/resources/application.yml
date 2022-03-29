@@ -1,0 +1,67 @@
+spring:
+  profiles:
+    active: @profileActive@
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+
+mybatis-plus:
+  type-enums-package: com.eu.*.enums.**
+  configuration:
+    map-underscore-to-camel-case: true
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*Mapper.xml
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: com.eu.**.model
+
+jwt:
+  key: Authorization
+  sign: 318f28e28f59478297900c272b1db385
+  expiration: 72000000000
+
+#连接超时时间
+sun:
+  net:
+    client:
+      defaultConnectTimeout: 60000
+      defaultReadTimeout: 60000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    logfile:
+      enabled: true
+
+#系统超级管理员角色名称
+system:
+  administrator:
+    roleName: 超级管理员
+    #系统超级管理员角色标识
+    roleMark: ADMINISTRATOR
+    #初始系统管理员帐号
+    username: admin
+    #初始系统管理员密码
+    password: admin
+
+security:
+  # 是否开启接口签名校验
+  sign: false
+  # 是否开启接口授权
+  authority: true
+  # 时间戳有效期2分钟 (ms)
+  tstimeout: 120000
+  # 签名有效期2分钟 (ms)
+  signtimeout: 120000
+  # md5加密密钥
+  secret: 318f28e28f59478297900c272b1db385
