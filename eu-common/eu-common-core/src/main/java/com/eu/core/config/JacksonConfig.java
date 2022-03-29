@@ -48,7 +48,7 @@
 //        public void serialize(LocalDateTime value, JsonGenerator gen, SerializerProvider serializers)
 //                throws IOException {
 //
-//            if (value != null){
+//            if (value != null) {
 //
 //                long timestamp = value.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
 //                gen.writeNumber(timestamp);
@@ -65,10 +65,10 @@
 //                throws IOException {
 //
 //            long timestamp = p.getValueAsLong();
-//            if (timestamp > 0){
+//            if (timestamp > 0) {
 //
-//                return LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp),ZoneId.systemDefault());
-//            }else{
+//                return LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp), ZoneId.systemDefault());
+//            } else {
 //
 //                return null;
 //            }

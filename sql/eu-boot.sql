@@ -11,7 +11,7 @@
  Target Server Version : 80026
  File Encoding         : 65001
 
- Date: 25/03/2022 17:46:15
+ Date: 29/03/2022 16:50:48
 */
 
 SET NAMES utf8mb4;
@@ -104,6 +104,13 @@ INSERT INTO `sys_logininfor` VALUES (667261639073988608, 'admin', '127.0.0.1', '
 INSERT INTO `sys_logininfor` VALUES (667262627222650880, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-25 17:10:18');
 INSERT INTO `sys_logininfor` VALUES (667263971287367680, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-25 17:15:38');
 INSERT INTO `sys_logininfor` VALUES (667264634876592128, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-25 17:18:16');
+INSERT INTO `sys_logininfor` VALUES (667273094674513920, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-25 17:51:53');
+INSERT INTO `sys_logininfor` VALUES (668683176658337792, 'admin', '192.168.1.6', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-29 15:15:03');
+INSERT INTO `sys_logininfor` VALUES (668698682316554240, 'admin', '192.168.1.6', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-29 16:16:40');
+INSERT INTO `sys_logininfor` VALUES (668704512277479424, 'admin', '192.168.1.6', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-29 16:39:50');
+INSERT INTO `sys_logininfor` VALUES (668704648508473344, 'admin', '192.168.1.6', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-29 16:40:22');
+INSERT INTO `sys_logininfor` VALUES (668705345744404480, 'admin', '192.168.1.6', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-29 16:43:09');
+INSERT INTO `sys_logininfor` VALUES (668707058576523264, 'admin', '192.168.1.6', '内网IP', 'Chrome 9', 'Mac OS X', '0', '登录成功', '2022-03-29 16:49:57');
 COMMIT;
 
 -- ----------------------------
