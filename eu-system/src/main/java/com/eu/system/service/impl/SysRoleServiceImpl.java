@@ -11,7 +11,6 @@ import com.eu.core.exception.GlobalExceptionCode;
 import com.eu.system.mapper.SysRoleMapper;
 import com.eu.system.model.po.SysRole;
 import com.eu.system.model.po.SysRoleMenu;
-import com.eu.system.model.po.SysUser;
 import com.eu.system.model.po.SysUserRole;
 import com.eu.system.service.ISysRoleMenuService;
 import com.eu.system.service.ISysRoleService;
